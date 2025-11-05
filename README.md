@@ -1,49 +1,41 @@
 Student Management System
+This is a full-stack app for managing a student list, built with React and Bootstrap. The backend is Node.js with a MySQL database.
 
-This is a simple web app to keep track of student details for a college project. It uses HTML and CSS for the front end, and a Node.js server with a MySQL database for the back end.
+It's a simple dashboard where you can see all the students in a table and add new students using a form.
 
-How to Run This Project
+Tech Used:
+Frontend: React, React-Bootstrap, Bootstrap 5
 
-Follow these steps to get the project working on your computer.
+Backend: Node.js & Express
 
-Step 1: Set up the Database
+Database: MySQL
 
-Start your XAMPP Control Panel and make sure Apache and MySQL are running.
+How to Run It
+You need to have two terminals open at the same time.
 
-Go to http://localhost/phpmyadmin in your browser.
+1. Database Setup (Do this only once)
+Make sure your MySQL server is running (from XAMPP or Workbench).
 
-Click on the "SQL" tab.
+Create a new, empty database. Name it student_system_db.
 
-Open the database_setup.sql file from this project, copy all the code inside it, and paste it into the SQL box.
+Go into that database and run the database_setup.sql file (it's in this project) to create the students table.
 
-Click the "Go" button. This will create the student_system database and the students table.
+2. Run the Backend (Terminal 1)
+Go into the /backend folder. cd backend
 
-Step 2: Start the Backend Server
+Install the packages (only once). npm install
 
-Open a terminal (like CMD or the one in VS Code).
+Important: Make sure your .env file is in this backend folder and has your MySQL password.
 
-Go into the /backend folder of this project.
+Start the server. node server.js
 
-Run the command below to download the code the server needs. You only have to do this once.
+It should say Connected to MySQL database!. Keep this running.
 
-npm install
+3. Run the Frontend (Terminal 2)
+Open a new terminal and go into the /frontend folder. cd frontend
 
+Install the packages (only once). This includes React and Bootstrap. npm install react-bootstrap bootstrap
 
-Heads up! Check the server.js file to make sure the database password is correct for your XAMPP setup. Most of the time, the password is blank ('').
+Start the React app. npm start
 
-Now, start the server by running:
-
-node server.js
-
-
-The terminal should say Server running on http://localhost:3001. Keep this terminal open!
-
-Step 3: View the Website
-
-Open the /frontend folder in VS Code.
-
-Right-click on the view-students.html file.
-
-Choose "Open with Live Server".
-
-Your browser will open the website, and it should now be working correctly.
+This will automatically open the app in your browser.
